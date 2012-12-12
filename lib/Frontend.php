@@ -42,7 +42,7 @@ class Frontend extends ApiFrontend {
         //exta menu for admin user not showing to the other logged in user    
             $is_admin = $this->api->auth->model['is_admin'];
             if($is_admin){
-                $menu->addMenuItem('admin','Admin');
+                $menu->addMenuItem('admin', 'Admin');
             }
             
         //appending other extra menu for logged in user    
@@ -56,7 +56,7 @@ class Frontend extends ApiFrontend {
             $menu = $this->add('Menu',null,'Menu')
             ->addMenuItem('index', 'Welcome')
             ->addMenuItem('Login')
-            ->addMenuItem('register','Register')
+            ->addMenuItem('register', 'Register')
             ;
 
         }

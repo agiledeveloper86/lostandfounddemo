@@ -11,7 +11,7 @@ class page_items_report extends Page {
 
 //adding radio button feature to Item Model
 		$m->getElement('state')->display('radio');
-/* 
+/* */
 //adding a debuging features
 		$m->debug();
 		$m->tryLoadAny();
