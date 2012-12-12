@@ -15,19 +15,19 @@ class Frontend extends ApiFrontend {
 
 //add jquery features
         $this->add('jUI');
-		
+        
 
 //adding authentication feature
-	   $this->add('Auth')->setModel('User');
+       $this->add('Auth')->setModel('User');
 
 //witelistening from authentication
        $this->auth->allowPage(array('Register', 'index'));
 
 
        
-    	
-//menu for logged in user	   
-		if($this->auth->isLoggedIn()){ 
+        
+//menu for logged in user      
+        if($this->auth->isLoggedIn()){ 
 
 
         //initial menu for logged in user
@@ -40,7 +40,7 @@ class Frontend extends ApiFrontend {
         //exta menu for admin user not showing to the other logged in user    
             $is_admin = $this->api->auth->model['is_admin'];
             if($is_admin){
-                $menu->addMenuItem('admin','Admin');
+                $menu->addMenuItem('admin', 'Admin');
             }
             
         //appending other extra menu for logged in user    

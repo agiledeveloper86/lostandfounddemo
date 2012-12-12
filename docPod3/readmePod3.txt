@@ -1,7 +1,8 @@
+==========================================================================================
 podcast1n2
-====================================================
+==========================================================================================
 step1
-----------------------------------------------------------------
+--------------------------------------------------
 1.create a db named lostandfounddemo with phpmyadmin
 2.import db.sql
 3.copy atk4 folder, atk4-addons folder , config-default.php, config-distrib.php and index.php to local
@@ -33,10 +34,12 @@ local/lib--Frontend.php-->adding authentication feature.
 
 local/lib/Model-->Item.php-->create it.
                           -->creating Model_User child from Model_Table parent.
+                          -->adding table from db.
                           -->adding fields to the Table.
                           -->use of type.
                -->User.php-->create it.
                           -->creating Model_User child from Model_Table parent.
+                          -->adding table from db.
                           -->adding fields to the Table.
                           -->use of mandatory.
                           -->use of display.
@@ -69,3 +72,54 @@ export db file rename it pod1n2export.db and put in in the doc of next podcast.
 end of step2........
 end of podcast1n2......
 ===================================================================================================================
+
+
+
+
+================================================================================================================
+podcast4
+=================================================================================================================
+local/doc-->import new db from db_for_part3 for podcast3
+create a admin user with email->admin@website.com and passwoed->password
+
+
+local/lib/Model-->Item.php-->adding relationship
+                          -->for saving 'mark as found'
+               -->User.php-->adding relationship
+                          -->adding expression
+               -->Country.php-->create it
+                             -->creating Model_Country child from Model_Table parent
+                             -->adding table from db
+                             -->adding fields to the Table
+               -->Type.php-->create it
+                          -->creating Model_Type child from Model_Table parent
+                          -->adding table from db
+                          -->adding fields to the Table
+
+
+local/page-->admin.php-->CRUD for User Model with jUI features
+                      -->CRUD for Item Model with jUI features
+                      -->CRUD for Type Model with jUI features
+                      -->CRUD for Type Model with jUI features
+                      
+          -->dsql.php-->creating page_dsql child from page parent
+                      -->printing content of a particular field of a particular table
+                      -->joining multiple data of different fields of different table.
+                      -->joining and shorting with where
+                      -->joining, sub-queries and shorting..
+          -->model.php-->creating page_model child from page parent
+                       -->printing data of a field of a particular table with condition..
+                       -->referencing
+                       -->joining
+                       -->joining, outputting with grid
+
+
+local/page/model-->details.php-->creating page_model_details child from page parent
+                              -->for catching ajax request from 'Details' button from page/model.php.
+                              --->some features will be updated later.
+
+export database as podcast3.sql and put in pod4part1 doc folder                              
+
+
+end of podcast3.......
+===============================================================================================================

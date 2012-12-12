@@ -6,14 +6,12 @@ class page_register extends Page {
 
     function init() {
         parent::init();
-       
+        $page = $this;
 
         
-//adding form to the page
-        $form = $this->add('Form');
-
 //adding model to the form
 //spacifing fields to the form 
+        $form = $this->add('Form');
         $form->setModel('User', array('email', 'password'));
 
 //add submit button with 'Register' label on it to the form
