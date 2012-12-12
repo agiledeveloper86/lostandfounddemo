@@ -9,7 +9,7 @@ class Frontend extends ApiFrontend {
 //connecting with db
         $this->dbConnect();
 
-//not so mucch important ---->for adding atk new version
+//for adding atk new version
         $this->requires('atk','4.2.0');
 
 
@@ -33,14 +33,16 @@ class Frontend extends ApiFrontend {
         //initial menu for logged in user
         $menu = $this->add('Menu',null,'Menu')
             ->addMenuItem('index', 'Welcome')
-            ->addMenuItem('items/lost', 'Report a Lost Item')
+            ->addMenuItem('items/report', 'Report an Item')
+        //menu for user preference
+            ->addMenuItem('user', 'User Preferences')
             ;
             
 
         //exta menu for admin user not showing to the other logged in user    
             $is_admin = $this->api->auth->model['is_admin'];
             if($is_admin){
-                $menu->addMenuItem('admin', 'Admin');
+                $menu->addMenuItem('Admin');
             }
             
         //appending other extra menu for logged in user    
@@ -54,7 +56,7 @@ class Frontend extends ApiFrontend {
             $menu = $this->add('Menu',null,'Menu')
             ->addMenuItem('index', 'Welcome')
             ->addMenuItem('Login')
-            ->addMenuItem('register', 'Register')
+            ->addMenuItem('Register')
             ;
 
         }

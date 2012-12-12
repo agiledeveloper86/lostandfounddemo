@@ -2,7 +2,6 @@
 <?php
 
 //creating page_model_details child from page parent
-//for catching ajax request from 'Details' button from page/model.php
 class page_model_details extends Page {
 	function init(){
 		parent::init();

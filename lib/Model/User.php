@@ -9,11 +9,10 @@ class Model_User extends Model_Table {
 		parent::init();
 
 //adding fields to the Table
-		$this->addField('first_name')->mandatory('Enter first name');
-		$this->addField('last_name')->mandatory('Enter last name');
-		$this->addField('email')->mandatory('Email is required');
-		$this->addField('password')->mandatory('Choose a suitable password')->display('password');
-
+		$this->addField('first_name')->mandatory('Enter first name.');
+		$this->addField('last_name')->mandatory('Enter last name.');
+		$this->addField('email')->mandatory('Email is required.');
+		$this->addField('password')->mandatory('Enter a password above.')->display('password');
 //adding expression
 		$this->addExpression('full_name')->set('concat(first_name," ",last_name)');
 

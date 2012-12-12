@@ -77,7 +77,7 @@ end of podcast1n2......
 
 
 ================================================================================================================
-podcast4
+podcast3
 =================================================================================================================
 local/doc-->import new db from db_for_part3 for podcast3
 create a admin user with email->admin@website.com and passwoed->password
@@ -123,3 +123,55 @@ export database as podcast3.sql and put in pod4part1 doc folder
 
 end of podcast3.......
 ===============================================================================================================
+
+
+
+==================================================================================================================
+podcast4
+=================================================================================================================
+
+part1
+---------------------------------------------------------------------
+
+import forLAFpt1.sql to the database
+
+add new user with email->user1@website.com and password->password
+
+local/lib--Frontend.php-->new menu for user preference.
+                       --->new menu for reporting item preference.
+                       -->change in AddMenuItem from 'items/lost' to 'items/reoprt' 
+
+local/lib/Model-->Item.php-->adding a field called state to Item Model 
+                             in item db with enum feature
+                          -->use of type
+                          -->use of enum
+                          -->use of radio
+
+local/page/-->admin.php-->on demand loading of country
+                       -->"function init()" and "parent::init();" deleted;
+                       -->function "page_index()" added for ading a admin/index subpage under pape_admin page
+                       -->function "country_index()" added for ading a admin/country subpage under pape_admin page
+                       -->ading a paginator for admin/country
+
+local/page/-->user.php-->for user preferences
+                      -->adding a form
+                      -->adding the fields (of logged in user) of the User model to the form
+                      -->specifing desired fields of a form by using array features
+                      -->adding a password confirmation field
+                      -->adding a form submit button to the form
+                      -->checking for mismatched password with if condition
+                      -->adding a js alert after form submission
+                      -->alternative implimentation for mismatched password checking
+                      -->checking for mismatched password with exception handler
+local/page/lost-->report.php-->renaming from lost.php
+                            -->creating page_items_report child from page parent
+                            -->assining Item model it to a variable
+                            -->adding radio button feature to Item Model
+                            -->adding a debuging features
+                            -->attaching particular loggedin user to the report page
+                            -->adding a form
+                            -->adding selected fields of Item model with array features
+                            -->adding a submit button
+
+end of part1 of podcast4
+-------------------------------------------------------------------

@@ -9,28 +9,42 @@ class Model_Item extends Model_Table {
 		parent::init();
 
 //adding fields to the Table		
-		$this->addField('title');
-		$this->addField('description')->type('text');
-		$this->addField('is_found')->type('boolean');
+		$this->addField('title')->mandatory('Title should not be empty.');
+		$this->addField('description')->mandatory('Description should be present')->type('text');                                  //use of type
+
+//adding a field called state to Item Model for action field in item db with enum feature
+		//$this->addField('state')->enum(array('lost', 'found'));                     //use of enum
+
+//adding a field called state to Item Model for action field in item db		
+		//$this->addField('state')->enum(array('lost', 'found'))
+		//                          ->mandatory('true');   //use of mandatory
+		//$this->addField('state')->enum(array('lost', 'found'))
+		//                          ->display(array('form'=>'radio'))                  //use of radio 
+		//                          ->mandatory('true');                              //use of mandatory
+		$this->addField('state')->enum(array('lost', 'found'))->mandatory('true');    //use of mandatory
+		
+		$this->addField('is_found')->type('boolean');                                //use of type
 
 
 //adding relationship
-		//$this->hasOne('User');
-		//$this->hasOne('User', null, 'id');
-        //$this->hasOne('User', null, 'first_name');
-        //$this->hasOne('User', null, 'last_name');
-        //$this->hasOne('User', null, 'email');
-		$this->hasOne('User', null, 'full_name');
+		//$this->hasOne('User');                        //for showing value of id field by default
+		//$this->hasOne('User', null, 'id');            //for showing value of id field 
+        //$this->hasOne('User', null, 'first_name');    //for showing value of first_name field
+        //$this->hasOne('User', null, 'last_name');     //for showing value of last_name  field
+        //$this->hasOne('User', null, 'email');         //for showing value of email field
+		$this->hasOne('User', null, 'full_name');       //for showing first_name+last_name field
 
 
-		$this->hasOne('Type');
-		//$this->hasOne('Type' null, 'id');
-		//$this->hasOne('Type' null, 'name');
+		$this->hasOne('Type');                 //for showing value of name field by default
+		//$this->hasOne('Type' null, 'id');    //for showing value of id field
+		//$this->hasOne('Type' null, 'name');  //for showing value of name field in properly
 
-		$this->hasOne('Country');
-		//$this->hasOne('Country', null, 'id');
-		//$this->hasOne('Country', null, 'name');
-		//$this->hasOne('Country', null, 'code');
+
+
+		$this->hasOne('Country');                       //for showing value of name field by default
+		//$this->hasOne('Country', null, 'id');         //for showing value of id field
+		//$this->hasOne('Country', null, 'name');       //for showing value of name field in properly
+		//$this->hasOne('Country', null, 'code');       //for showing value of code field
 	}
 
 //for saving 'mark as found'
