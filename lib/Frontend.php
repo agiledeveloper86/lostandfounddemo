@@ -19,9 +19,9 @@ class Frontend extends ApiFrontend {
 		$this->add('Menu',null,'Menu')
 
 //adding meu items
-            ->addMenuItem('index','Welcome')
-            ->addMenuItem('index', 'logout')
-             ;
+            ->addMenuItem('index','welcome')
+            ->addMenuItem('index','logout')
+            ;
 
     }
 }
