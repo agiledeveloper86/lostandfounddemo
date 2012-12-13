@@ -10,6 +10,3 @@ $config['dsn']='mysql://user_9b824fc1:iiyZzpjq;.(-kk@a.db.shared.orchestra.io/db
 
 $config['url_postfix']='';
 $config['url_prefix']='?page=';
-
-
-
