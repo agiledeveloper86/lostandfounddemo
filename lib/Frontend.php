@@ -21,7 +21,7 @@ class Frontend extends ApiFrontend {
 	   $this->add('Auth')->setModel('User');
 
 //witelistening from authentication
-       $this->auth->allowPage(array('Register', 'index'));
+       $this->auth->allowPage(array('register', 'index'));
 
 
        
