@@ -21,7 +21,7 @@ class Frontend extends ApiFrontend {
        $this->add('Auth')->setModel('User');
 
 //witelistening from authentication
-       $this->auth->allowPage(array('Register', 'index'));
+       $this->auth->allowPage(array('register', 'index'));
 
 
        
@@ -56,7 +56,7 @@ class Frontend extends ApiFrontend {
             $menu = $this->add('Menu',null,'Menu')
             ->addMenuItem('index', 'Welcome')
             ->addMenuItem('Login')
-            ->addMenuItem('register', 'Register')
+            ->addMenuItem('register','Register')
             ;
 
         }
