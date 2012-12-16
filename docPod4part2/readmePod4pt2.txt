@@ -1,5 +1,5 @@
 ==========================================================================================
-podcast1n2
+podcast1n2--Starting your first Web Software project - Agile Toolkit Tutorial
 ==========================================================================================
 step1
 --------------------------------------------------
@@ -77,7 +77,7 @@ end of podcast1n2......
 
 
 ================================================================================================================
-podcast3
+podcast3-->SQL, Dynamic Queries, Models, ORM - Agile Toolkit Data Stack
 =================================================================================================================
 local/doc-->import new db from db_for_part3 for podcast3
 create a admin user with email->admin@website.com and passwoed->password
@@ -127,7 +127,7 @@ end of podcast3.......
 
 
 ==================================================================================================================
-podcast4
+podcast4-->Creating Menu, New pages, Form validation and other custom UI in Agile Toolkit Tutorial
 =================================================================================================================
 
 part1
@@ -179,6 +179,22 @@ end of part1 of podcast4
 
 part2
 ----------------------------------
+local/lib--Frontend.php-->menu for List
+local/lib/Model-->Lost.php-->create it
+                           -->creating the Model_Item_Found child class  from Model_Item parent class
+                           -->inhariting
+                           -->instantiating
+                           -->adding condition for enum
+local/lib/Model-->Found.php-->create it
+                           -->creating the Model_Item_Found child class  from Model_Item parent class
+                           -->inhariting
+                           -->instantiating
+                           -->adding condition for enum
+local/lib/Model/View-->ItemList.php-->adding a ItemList View as CompleteLister
+                                   -->adding list/items as defaultTemplate
+                                   -->adding formatRow function
+                                   -->generating link custom address for items.html
+
 local/page/lost-->report.php-->showing the value of all fields as grid(expression)
                             -->for showing single expression  as grid
 local/page/items-->list.php-->create it
@@ -186,16 +202,11 @@ local/page/items-->list.php-->create it
                            -->inhariting
                            -->instantiating
                            -->adding tabs and setting model to it
-local/lib/Model-->Found.php-->create it
-                           -->creating the Model_Item_Found child class  from Model_Item parent class
-                           -->inhariting
-                           -->instantiating
-                           -->adding condition for enum
-local/lib/Model-->Lost.php-->create it
-                           -->creating the Model_Item_Found child class  from Model_Item parent class
-                           -->inhariting
-                           -->instantiating
-                           -->adding condition for enum
-local/lib--Frontend.php-->menu for List
+                           -->adding custom View_ItemList and setiing Model  to it 
+
+local/templates/default/list-->items.html-->create it 
+                                    -->making custom list of lost or found item by smLite by use of CompleteLister
+                                    -->adding title and description as lister
+                                    -->adding a link showing id in it
 
 

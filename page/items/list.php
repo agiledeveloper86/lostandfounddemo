@@ -14,6 +14,7 @@ class page_items_list extends Page {
 //adding tabs and setting model to it
       $t = $tt->addTab('Found Items');
       //$t->add('Grid')->setModel('Item_Found');
+//adding custom View_ItemList and setiing Model 'Item_Found' to it 
       $t->add('View_ItemList')->setModel('Item_Found');
 
       $t = $tt->addTab('Lost Items');
@@ -24,6 +25,7 @@ class page_items_list extends Page {
       //$t->add('CompleteLister', null, null, array('list/items'))->setModel('Item_Lost');
 
 //making cutom list more compact and portable
+//adding custom View_ItemList and setiing Model 'Item_lost' to it 
       $t->add('View_ItemList')->setModel('Item_Lost');
 
 
