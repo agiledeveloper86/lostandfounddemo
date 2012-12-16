@@ -11,7 +11,31 @@ class page_items_report extends Page {
 
 //adding radio button feature to Item Model
 		$m->getElement('state')->display('radio');
+/* 
+for showing all expression 
+//adding debugging features
+        $m->debug();
+
+//showing the valua of all fields as grid(expression)
+        $this->add('Grid')->setModel($m);
+
+//cutting of the code
+        return;
 /* */
+
+/* 
+//for showing single expression 
+//adding debugging features
+        $m->debug();
+
+//showing the valua of all fields as grid(expression)
+        $this->add('Grid')->setModel($m, array('title'));
+
+// cutting of the code
+        return;
+/* */
+		
+/* 
 //adding a debuging features
 		$m->debug();
 		$m->tryLoadAny();

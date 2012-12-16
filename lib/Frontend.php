@@ -33,6 +33,8 @@ class Frontend extends ApiFrontend {
         //initial menu for logged in user
         $menu = $this->add('Menu',null,'Menu')
             ->addMenuItem('index', 'Welcome')
+        //menu for List
+            ->addMenuItem('items/list', 'List')
             ->addMenuItem('items/report', 'Report an Item')
         //menu for user preference
             ->addMenuItem('user', 'User Preferences')
