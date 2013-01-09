@@ -208,5 +208,6 @@ local/templates/default/list-->items.html-->create it
                                     -->making custom list of lost or found item by smLite by use of CompleteLister
                                     -->adding title and description as lister
                                     -->adding a link showing id in it
-
+end of part2 of podcast4
+----------------------------------------------------------
 
