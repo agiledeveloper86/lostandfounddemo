@@ -14,7 +14,7 @@ step1
                   -->making connection with db
                   -->to include agiletoolkit
                   -->adding jQuery features
-                  -->adding menu menu
+                  -->adding menu
                   -->adding meu items
 8.page/index.php-->create it
                 -->creating page_index child from Page parent
